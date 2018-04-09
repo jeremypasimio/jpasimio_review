@@ -1,5 +1,5 @@
 package main.java;
- 
+
 /**
  * class for matrix positions
  */
@@ -24,5 +24,7 @@ public class InvalidOperationException extends RuntimeException {
         public InvalidOperationException(String message) {
                 super( message );
         }
+
 }
+
 

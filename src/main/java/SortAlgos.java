@@ -24,12 +24,14 @@ public final class SortAlgos {
 		        int n = vec.length-1;
 		        Item temp;
                 int bottom;       // bottom for each pass        
-                for (bottom = 1; bottom < n; bottom++)  {
-                        for (int i = n-1; i >= bottom; i--) {
-                                if (vec[i-1].key > vec[i].key) {
-                                        temp = vec[i-1];
-                                        vec[i-1] = vec[i];
-                                        vec[i] = temp;
+
+                for (bottom = 0; bottom < n; bottom++)  {
+                        for (int i = 0; i < n-bottom; i++) {
+                                if (vec[i].key > vec[i+1].key) {
+                                        temp = vec[i];
+                                        vec[i] = vec[i+1];
+                                        vec[i+1] = temp;
+
                                 }
                         }
                 }
